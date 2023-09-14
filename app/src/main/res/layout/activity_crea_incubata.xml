@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coloreSfondo"
+    tools:context=".activity_crea_incubata">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/LL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/titolo"
+                    style="@style/titoli_pagine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="@string/crea_incubata" />
+            </LinearLayout>
+
+            <!-- sezione "INSERISCI NOME"-->
+            <LinearLayout
+                android:id="@+id/LL2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LL1"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="310dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/LL1"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/file_blue"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="Inserisci un nome"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <GridLayout
+                        android:id="@+id/testoCosaDeviFare"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/file_white">
+
+                        <EditText
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/robotoregular"
+                            android:gravity="center"
+                            android:hint="Dai nome all'incubata"
+                            android:textSize="18dp" />
+                    </GridLayout>
+
+                </LinearLayout>
+
+                <!-- sezione "TIPOLOGIA UOVA" -->
+
+                <GridLayout
+                    android:id="@+id/LL3"
+                    android:layout_width="310dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/LL1"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/file_red"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:onClick="sceltaUovo"
+                            android:id="@+id/radio_quaglia"
+                            android:button="@null"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_quaglia"
+                            android:text="Quaglia"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <RadioButton
+                            android:onClick="sceltaUovo"
+                            android:id="@+id/radio_gallina"
+                            android:button="@null"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_pollo"
+                            android:text="Gallina"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <RadioButton
+                            android:onClick="sceltaUovo"
+                            android:id="@+id/radio_pappagallo"
+                            android:button="@null"
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableTop="@drawable/ic_pappagallo"
+                            android:text="Pappagallo"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RadioGroup>
+
+               <!--     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:text="Quaglia" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:text="Gallina" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:text="Pappagallo" /> -->
+
+                </GridLayout>
+
+                <!-- sezione "SCELTA UOVA" -->
+                <LinearLayout
+                    android:layout_width="310dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/LL1"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/file_blue"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="Periodo incubazione"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <GridLayout
+                        android:id="@+id/perido"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/file_white">
+
+                        <EditText
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="20dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:hint="Data inizio"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/dataInizio"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_row="0"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_calendario" />
+
+                        <EditText
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_row="2"
+                            android:layout_column="0"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="20dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:hint="Data fine"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:id="@+id/dataFine"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_row="2"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_calendario" />
+                    </GridLayout>
+                </LinearLayout>
+
+                <!-- sezione "NOTIFICHE" -->
+                <GridLayout
+                    android:id="@+id/SezioneNotifiche"
+                    style="@style/sezione_dettagli"
+                    android:layout_below="@+id/LL1"
+                    android:background="@drawable/file_blue"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="Notifiche"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <Switch
+                        android:id="@+id/swithNotifiche"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center" />
+                </GridLayout>
+
+                <!-- sezione "CONTROLLO REMOTO" (RMB: c'è solo se l'incubatrice è domotica) -->
+                <GridLayout
+                    android:id="@+id/dettagliIncubatrice"
+                    style="@style/sezione_dettagli"
+                    android:layout_below="@+id/LL1"
+                    android:background="@drawable/file_blue"
+                    android:onClick="lanciaDettagliIncubatore"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/robotobold"
+                        android:text="Dettagli incubatore"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:layout_gravity="right|center"
+                        android:background="@drawable/ic_freccia_destra" />
+                </GridLayout>
+
+                <!-- bottone "salva modifiche" -->
+                <Button
+                    android:onClick="inserisciIncubata"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/file_bottoni_back"
+                    android:text="Salva"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/tabbar" />
+
+
+</RelativeLayout>

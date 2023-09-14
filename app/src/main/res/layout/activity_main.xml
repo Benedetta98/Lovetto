@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coloreSfondo">
+
+
+            <LinearLayout
+                android:id="@+id/LL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_margin="33dp">
+
+                <TextView
+                    android:id="@+id/daytv"
+                    android:layout_width="313dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="70dp"
+                    android:fontFamily="@font/robotoblack"
+                    android:text="Benvenuto in Lovetto"
+                    android:textColor="#171717"
+                    android:textSize="35dp" />
+            </LinearLayout>
+
+
+            <!-- Sezione aggiunta prima incubata -->
+            <GridLayout
+                android:id="@+id/LL2"
+                style="@style/section_blocchi_home"
+                android:layout_below="@id/LL1"
+                android:background="@drawable/file_red"
+                android:onClick="lanciaCreaIncubata"
+                android:paddingTop="34dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/robotobold"
+                    android:gravity="center"
+                    android:text="Aggiungi la tua prima incubata"
+                    android:textColor="#fff"
+                    android:textSize="24dp" />
+            </GridLayout>
+
+
+            <!-- Approfondisci -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/LL3"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="13dp"
+                style="@style/descrizione_sezione"
+                android:text="Approfondisci"
+                android:textSize="18dp" />
+
+
+            <!-- Sezione tutorial -->
+            <GridLayout
+                android:onClick="mostraTutorial"
+                android:id="@+id/LL3"
+                style="@style/section_blocchi_home"
+                android:layout_below="@+id/LL2"
+                android:background="@drawable/file_blue">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="left|center"
+                    android:fontFamily="@font/robotobold"
+                    android:gravity="left"
+                    android:paddingLeft="15dp"
+                    android:text="Impara come utilizzare un'incubatrice"
+                    android:textColor="#000"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:background="@drawable/lamp_icon" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/ic_freccia_destra" />
+            </GridLayout>
+
+    <!-- Bottom navigation
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/tabbar" />
+
+</RelativeLayout>

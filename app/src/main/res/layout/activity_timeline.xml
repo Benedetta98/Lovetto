@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coloreSfondo"
+    tools:context=".activity_timeline">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/LL1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp">
+
+                <ImageView
+                    android:onClick="tornaDettagliIncubata"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/back_icon_right_margin"
+                    android:background="@drawable/ic_back" />
+
+                <TextView
+                    style="@style/titolo_pagina_con_tasto_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:nextFocusRight="@id/LL1"
+                    android:text="@string/timeline" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LL1"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center|left"
+                        android:padding="12dp"
+                        android:text="Giorno 1"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text=" Inizio incubata.\n Imposta i gradi a 37,7 °C - 99,86 °F e \n l'umidità al 50%-55%."
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center|left"
+                        android:padding="12dp"
+                        android:text="Giorno 2"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text=" Gira le uova.\n Controlla tutti i giorni la temperatura e  l'umidità."
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:padding="12dp"
+                        android:gravity="center|left"
+                        android:text="Giorno 3 - 9"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text=" Gira le uova.\n Gradi: 37,7 °C - 99,86 °F\n Uminidità: 55%-50%. Controlla livello acqua"
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center|left"
+                        android:padding="12dp"
+                        android:text="Giorno 10"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text=" E' ora della speratura.\n Gradi: 37,7 °C - 99,86 °F"
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:padding="12dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Giorno 11-17"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text=" Gira le uova.\n Gradi: 37,7 °C - 99,86 °F\n Uminidità: 55%-50%. Controlla livello acqua"
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:padding="12dp"
+                        android:gravity="center|left"
+                        android:text="Giorno 18"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text=" Preparati alla scquiusa. Non girare le uova.\n Imposta la nuova temperatura a 37,2 °C - 99,96 °F e Uminidità al 70%."
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:padding="12dp"
+                        android:text="Giorno 19"
+                        android:gravity="center|left"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text=" Non girare le uova.\n Gradi: 37,7 °C - 99,86 °F\n Uminidità: 70%"
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:padding="12dp"
+                        android:text="Giorno 20"
+                        android:gravity="center|left"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text=" I tuoi pulcini stanno nascendo, non toccarli.\n Gradi: 37,7 °C - 99,86 °F\n Uminidità: 70%"
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/file_timeline_sx"
+                        android:fontFamily="@font/robotobold"
+                        android:padding="12dp"
+                        android:text="Giorno 21"
+                        android:gravity="center|left"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:background="@drawable/file_timeline_dx"
+                            android:fontFamily="@font/robotoregular"
+                            android:text="I tuoi pulcini sono nati, lasciali asciugare per qualche ora e mettili nell'apposita box con lampada."
+                            android:textColor="#BDBDBD"
+                            android:textSize="12dp" />
+                    </GridLayout>
+                </GridLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/tabbar" />
+
+</RelativeLayout>

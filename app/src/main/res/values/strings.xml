@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lovetto</string>
+
+    <string name="dettagli_incubata">Dettagli \nincubata </string>
+    <string name="crea_incubata">Crea \nincubata </string>
+    <string name="dettagli_incubatore">Dettagli \nincubatore </string>
+    <string name="mod_dettagli_incubata">Modifica \ndettagli incubata </string>
+    <string name="controllo_remoto">Controllo remoto</string>
+    <string name="tutorial_header_pagina">Tutorial</string>
+    <string name="speratura">Speratura </string>
+    <string name="testo_speratura"> Il tuo ovetto dovrebbe \nessere così</string>
+    <string name="timeline">Passi da seguire </string>
+    <string name="vendi">Vendi</string>
+    <string name="title_location_permission">Titolo</string>
+    <string name="text_location_permission">Permesso</string>
+    <string name="ok">OK</string>
+    <string name="hint_ricerca">Cerca un luogo o un negozio</string>
+    <string name="descrizione_sezione_negozi">Negozi vicino a te</string>
+    <string name="lista">Lista \nIncubate</string>
+    <string name="calendario">Calendario</string>
+
+</resources>

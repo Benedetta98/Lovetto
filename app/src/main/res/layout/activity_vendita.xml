@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coloreSfondo">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.example.lovetto.MapsMarkerActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:alpha="0.8"
+        android:background="@color/coloreSfondo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <TextView
+        android:id="@+id/headerTv"
+        style="@style/titoli_pagine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/header_section_left_margin"
+        android:layout_marginLeft="@dimen/header_section_left_margin"
+        android:layout_marginTop="@dimen/header_section_top_margin"
+        android:text="@string/vendi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.95"
+        android:background="@drawable/sezione_inferiore_mappa"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="@dimen/default_margin_doubled"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin_doubled"
+            android:background="@drawable/barra_ricerca"
+            android:minHeight="?attr/actionBarSize"
+            android:titleTextColor="#DCDCDC"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        </Toolbar>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_alignTop="@id/toolbar"
+            android:layout_alignRight="@id/toolbar"
+            android:layout_toRightOf="@id/iconaCerca"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_ricerca"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="16dp"
+            android:textSize="16dp" />
+
+
+        <ImageView
+            android:id="@+id/iconaCerca"
+            android:layout_width="71dp"
+            android:layout_height="54dp"
+            android:layout_alignLeft="@id/toolbar"
+            android:layout_alignTop="@id/toolbar"
+            android:background="@drawable/tasto_cerca"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_search" />
+
+        <TextView
+            android:id="@+id/descrizione_sezione"
+            style="@style/descrizione_sezione"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/descrizione_sezione_negozi" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/descrizione_sezione"
+            android:layout_alignParentLeft="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/negozio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/descrizione_sezione"
+                    android:layout_marginLeft="@dimen/default_margin_doubled"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/imgNegozio"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/forma_tasto_incremento"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shop_24" />
+
+                    <TextView
+                        style="@style/label_cella_tutorial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_toRightOf="@id/imgNegozio"
+                        android:text="Mercato del borgo" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/negozio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/negozio1"
+                    android:layout_marginLeft="@dimen/default_margin_doubled"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/imgNegozio2"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/forma_tasto_incremento"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shop_24" />
+
+                    <TextView
+                        style="@style/label_cella_tutorial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_toRightOf="@id/imgNegozio2"
+                        android:text="Macelleria da zio pipp8" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/negozio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/negozio2"
+                    android:layout_marginLeft="@dimen/default_margin_doubled"
+                    android:layout_marginBottom="@dimen/default_margin">
+
+                    <ImageView
+                        android:id="@+id/imgNegozio3"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/forma_tasto_incremento"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shop_24" />
+
+                    <TextView
+                        style="@style/label_cella_tutorial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:layout_toRightOf="@id/imgNegozio3"
+                        android:text="Mattatoio" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/tabbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

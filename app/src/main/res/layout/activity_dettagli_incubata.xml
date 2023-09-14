@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coloreSfondo"
+    tools:context=".activity_dettagli_incubata">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- sezione TITOLO -->
+            <LinearLayout
+                android:id="@+id/LL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/titolo"
+                    style="@style/titoli_pagine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="@string/dettagli_incubata" />
+
+                <!-- bottone MODIFICA (rimanda a "modifica dettagli incubata) -->
+                <Button
+                    android:onClick="mostraModificaDettagliIncubata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="69dp"
+                    android:background="@drawable/file_bottoni_back"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Modifica"
+                    android:textColor="#FFF" />
+            </LinearLayout>
+
+            <!-- sezione INFORMAZIONI -->
+            <GridLayout
+                android:id="@+id/LL2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LL1"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_row="0"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:id="@+id/nomeIncubataDettagli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotoslab"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:text="Enderegg"
+                        android:textColor="#000"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:id="@+id/giornoDi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotobold"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:text="GIORNO 1 DI 21"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="32dp"
+                    android:background="@drawable/uovo_dettagli" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:text="1%"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="58dp"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/robotobold" />
+            </GridLayout>
+
+            <LinearLayout
+                android:id="@+id/LL3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LL2"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <!-- sezione REMINDER-->
+                <LinearLayout
+                    android:id="@+id/reminder"
+                    android:layout_width="310dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/LL1"
+                    android:background="@drawable/file_blue"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top"
+
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="Cosa devi fare oggi"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <GridLayout
+                        android:id="@+id/testoCosaDeviFare"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/file_white">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:fontFamily="@font/robotoregular"
+                            android:gravity="center"
+                            android:text="Gira le uova e controlla la temperatura."
+                            android:textSize="20dp" />
+                    </GridLayout>
+
+                </LinearLayout>
+
+                <!-- sezione "PASSI DA SEGUIRE" -->
+                <GridLayout
+                    android:onClick="mostraTimeline"
+                    android:id="@+id/passiSeguire"
+                    style="@style/sezione_dettagli"
+                    android:layout_below="@+id/LL1"
+                    android:background="@drawable/file_blue"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        style="@style/sezione_icone"
+                        android:background="@drawable/ic_list2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_gravity="left|center"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="Passi da seguire"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:layout_gravity="right|center"
+                        android:background="@drawable/ic_freccia_destra" />
+                </GridLayout>
+
+
+                <!-- sezione "CALENDARIO" -->
+                <GridLayout
+                    android:onClick="mostraCalendario"
+                    android:id="@+id/calendario"
+                    style="@style/sezione_dettagli"
+                    android:layout_below="@+id/LL1"
+                    android:background="@drawable/file_blue"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        style="@style/sezione_icone"
+                        android:background="@drawable/ic_calendario" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_gravity="left|center"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="Calendario"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:layout_gravity="right|center"
+                        android:background="@drawable/ic_freccia_destra" />
+                </GridLayout>
+
+                <!-- sezione "SPERATURA" -->
+                <GridLayout
+                    android:onClick="mostraSperatura"
+                    android:id="@+id/speratura"
+                    style="@style/sezione_dettagli"
+                    android:layout_below="@+id/LL1"
+                    android:background="@drawable/file_blue"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        style="@style/sezione_icone"
+                        android:background="@drawable/ic_torcia" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_gravity="left|center"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="Speratura"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:layout_gravity="right|center"
+                        android:background="@drawable/ic_freccia_destra" />
+                </GridLayout>
+
+                <!-- sezione "CONTROLLO REMOTO" (RMB: c'è solo se l'incubatrice è domotica) -->
+                <GridLayout
+                    android:onClick="mostraControlloRemoto"
+                    android:id="@+id/controlloRemoto"
+                    style="@style/sezione_dettagli"
+                    android:layout_below="@+id/LL1"
+                    android:background="@drawable/file_blue"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        style="@style/sezione_icone"
+                        android:background="@drawable/ic_temp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_gravity="left|center"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="Controllo remoto"
+                        android:textColor="#000"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:layout_gravity="right|center"
+                        android:background="@drawable/ic_freccia_destra" />
+                </GridLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/tabbar" />
+
+
+</RelativeLayout>

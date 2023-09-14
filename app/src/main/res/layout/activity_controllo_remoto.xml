@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_controllo_remoto"
+    android:background="@color/coloreSfondo">
+
+    <LinearLayout
+        android:id="@+id/HeaderSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/back_icon_right_margin"
+            android:background="@drawable/ic_back"
+            android:onClick="goBack" />
+
+        <TextView
+            style="@style/titolo_pagina_con_tasto_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/controllo_remoto" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/HeaderSection"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeaderSection">
+
+
+        <LinearLayout
+            android:id="@+id/sezioneTemperatura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_margin_doubled"
+            android:layout_toLeftOf="@id/divisore"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/descrizione_sezione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Temperatura" />
+
+            <ImageButton
+                android:layout_width="115dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@drawable/forma_tasto_incremento"
+                android:onClick="incrementaTemperatura"
+                android:src="@drawable/ic_icona_piu" />
+
+            <RelativeLayout
+                android:id="@+id/sliderTemperatura"
+                android:layout_width="115dp"
+                android:layout_height="305dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/barra_sfondo_temperatura"
+                android:padding="0dp">
+
+                <View
+                    android:id="@+id/barraTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="232dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/barra_temperatura" />
+
+                <TextView
+                    android:id="@+id/valoreTemperatura"
+                    style="@style/valore_slider_controllo_remoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="36.5°"/>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:layout_width="115dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@drawable/forma_tasto_incremento"
+                android:onClick="decrementaTemperatura"
+                android:src="@drawable/ic_icona_meno" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divisore"
+            android:layout_width="1dp"
+            android:layout_height="522dp"
+            android:layout_alignBottom="@id/sezioneTemperatura"
+            android:layout_centerHorizontal="true"
+            android:background="@color/coloreDivisore" />
+
+        <LinearLayout
+            android:id="@+id/sezioneUmidita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_doubled"
+            android:layout_toRightOf="@id/divisore"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/descrizione_sezione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Umidità" />
+
+            <ImageButton
+                android:layout_width="115dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@drawable/forma_tasto_incremento"
+                android:onClick="incrementaUmidita"
+                android:src="@drawable/ic_icona_piu" />
+
+            <RelativeLayout
+                android:id="@+id/sliderUmidita"
+                android:layout_width="115dp"
+                android:layout_height="305dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@drawable/barra_sfondo_umidita">
+
+                <View
+                    android:id="@+id/barraUmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="213dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/barra_umidita" />
+
+                <TextView
+                    android:id="@+id/valoreUmidita"
+                    style="@style/valore_slider_controllo_remoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="70%"/>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:layout_width="115dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@drawable/forma_tasto_incremento"
+                android:onClick="decrementaUmidita"
+                android:src="@drawable/ic_icona_meno" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/tabbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

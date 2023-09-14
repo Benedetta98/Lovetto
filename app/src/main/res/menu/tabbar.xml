@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/listaIncubata"
+        android:title="Incubate"
+        android:icon="@drawable/ic_list" />
+    <item
+        android:id="@+id/vendite"
+        android:title="Vendi"
+        android:icon="@drawable/ic_money" />
+    <item
+        android:id="@+id/tutorial"
+        android:title="@string/tutorial_header_pagina"
+        android:icon="@drawable/ic_book"/>
+</menu>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coloreSfondo">
+
+
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="33dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/left_btn" />
+
+        <TextView
+            android:id="@+id/daytv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:fontFamily="@font/robotoblack"
+            android:textColor="#171717"
+            android:text="Ieri"
+            android:textSize="39dp"/>
+
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/right_btn"
+            android:onClick="lanciaOggi"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/LL1">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- testo benvenuto -->
+            <TextView
+                android:id="@+id/benvenutotv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LL1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="13dp"
+                style="@style/descrizione_sezione"
+                android:gravity="left"
+                android:text="Enderegg"
+                android:textSize="18dp" />
+
+
+            <RelativeLayout
+                android:layout_below="@id/benvenutotv"
+                style="@style/section_blocchi_home"
+                android:layout_marginBottom="30dp"
+                android:onClick="mostraCRemoto">
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_timeline_sx_blue">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/icona_termometro"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_timeline_dx_white">
+                    <TextView
+                        style="@style/label_card_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Imposta la temperatura a 37,5° C"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/default_margin"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/incubatricetv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LL1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="13dp"
+                style="@style/descrizione_sezione"
+                android:gravity="left"
+                android:text="Friggi Ovetto"/>
+
+
+            <RelativeLayout
+                android:layout_below="@id/benvenutotv"
+                style="@style/section_blocchi_home"
+                android:layout_marginBottom="@dimen/default_margin">
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_timeline_sx_blue">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/icona_ov"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_timeline_dx_white">
+                    <TextView
+                        style="@style/label_card_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ricordati di\ngirare\nle uova!"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/default_margin"/>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_freccia_destra" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/benvenutotv"
+                style="@style/section_blocchi_home"
+                android:layout_marginBottom="30dp">
+                <RelativeLayout
+                    android:layout_width="112dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_timeline_sx_blue">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/icona_padella"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="198dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_timeline_dx_white">
+                    <TextView
+                        style="@style/label_card_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="È l’ora della frittata"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/default_margin"/>
+                    <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_freccia_destra" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="310dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/coloreDivisore"/>
+
+            <TextView
+                android:id="@+id/approfondisci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LL1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="13dp"
+                style="@style/descrizione_sezione"
+                android:gravity="left"
+                android:text="Approfondisci"/>
+
+            <RelativeLayout
+                style="@style/section_blocchi_home"
+                android:background="@drawable/file_blue"
+                android:layout_marginBottom="100dp"
+                android:onClick="mostraT">
+                <TextView
+                    android:id="@+id/lastCellLbl"
+                    style="@style/label_card_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scopri come i\npavoni si\nintrufolano in\ncasa tua"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/default_margin"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_freccia_destra" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignRight="@id/scroll"
+        android:layout_marginRight="-22dp"
+        android:layout_above="@id/bottomNav"
+        android:background="@drawable/add_btn"
+        android:src="@drawable/plus_icon"
+        android:layout_marginBottom="@dimen/default_margin_doubled"
+        android:onClick="lanciaCreaIncubata"/>
+
+    <!-- Bottom navigation
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/tabbar" />
+
+</RelativeLayout>
